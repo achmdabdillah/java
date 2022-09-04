@@ -45,13 +45,13 @@ public class Main {
         System.out.println("Contact list\n");
         mobilePhone.printContacts();
     }
-    public static void addContact(){
-        String name, phoneNum;
+    public static void addContact(){ 
         System.out.println("Enter name : \n");
-        name = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Enter phone : \n");
-        phoneNum = scanner.nextLine();
+        String phoneNum = scanner.nextLine();
         Contact contact = Contact.createContact(name, phoneNum);
+
         if(mobilePhone.addNewContact(contact)){
             System.out.println("New contact added. name: " + contact.getName() + ", phone: " + contact.getPhoneNumber() + "\n");
         }else {

@@ -12,16 +12,13 @@ public class MobilePhone {
     }
 
     public boolean addNewContact(Contact contact){
-        if(findContact(contact.getName()) >= 0){
+        if(findContact(contact.getName()) >=0) {
             System.out.println("Contact is already on file");
-            for(int i = 0; i < myContacts.size(); i++){
-                System.out.println(myContacts.get(i).getName());
-            }
             return false;
-        }else {
-            myContacts.add(contact);
-            return true;
         }
+
+        myContacts.add(contact);
+        return true;
     }
 
     public boolean updateContact(Contact oldContact, Contact newContact){
