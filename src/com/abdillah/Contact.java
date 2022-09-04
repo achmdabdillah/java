@@ -1,8 +1,8 @@
 package com.abdillah;
 
 public class Contact  {
-    private static String name;
-    private static String phoneNumber;
+    private String name;
+    private String phoneNumber;
 
     public Contact (String name, String phoneNumber) {
         this.name = name;
