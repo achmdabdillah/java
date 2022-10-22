@@ -2,8 +2,8 @@ package com.abdil;
 
 public class Main {
     public static void main(String[] args) {
-        char[] arr = {'a','b'};
-        char target = 'z';
+        char[] arr = {'c','f', 'j'};
+        char target = 'c';
 
         char ans = nextGreatestLetter(arr, target);
         System.out.println(ans);
