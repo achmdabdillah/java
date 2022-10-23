@@ -5,29 +5,28 @@ public class FindPositionInfiniteArr {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
         int target = 4;
-        int ans = ans(arr, target);
+        int ans = findPos(arr, target);
         System.out.println(ans);
     }
-    static int ans(int[] nums, int target){
+
+    static int findPos(int[] nums, int target){
         int start = 0;
         int end = 1;
+        boolean isInRange = false;
 
         while(target > nums[end]){
             start = end + 1;
             end = (start * 2) + 1;
         }
-        int ans = findPos(nums, target, start, end);
-        return ans;
-    }
+        isInRange = true;
 
-    static int findPos(int[] nums, int target, int start, int end){
-        while(start <= end){
+        while(start <= end && isInRange){
             int mid = start + (end - start) / 2;
 
-            
             if(target < nums[mid]){
                 end = mid - 1;
-            } else if(target > nums[mid]){
+            }
+            else if(target > nums[mid]){
                 start = mid + 1;
             } else {
                 return mid;
